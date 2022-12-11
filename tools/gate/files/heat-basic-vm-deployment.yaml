@@ -7,15 +7,15 @@ parameters:
 
   image:
     type: string
-    default: Cirros 0.3.5 64-bit
+    default: ubuntu18.04
 
   ssh_key:
     type: string
-    default: heat-vm-key
+    default: openstack_key
 
   cidr:
     type: string
-    default: 10.11.11.0/24
+    default: 10.0.0.0/24
 
   dns_nameserver:
     type: comma_delimited_list
@@ -26,9 +26,9 @@ resources:
   flavor:
     type: OS::Nova::Flavor
     properties:
-      disk: 1
-      ram: 64
-      vcpus: 1
+      disk: 60
+      ram: 2048
+      vcpus: 2
 
   server:
     type: OS::Nova::Server
