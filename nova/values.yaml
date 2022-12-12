@@ -1349,7 +1349,7 @@ conf:
       ram_allocation_ratio: 1.0
       disk_allocation_ratio: 1.0
       cpu_allocation_ratio: 3.0
-      state_path: /nvme_data/vms/nova
+      state_path: /var/lib/nova
       osapi_compute_listen: 0.0.0.0
       # NOTE(portdirect): the bind port should not be defined, and is manipulated
       # via the endpoints section.
