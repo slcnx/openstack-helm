@@ -7,8 +7,8 @@ function setup_loopback_devices() {
   osd_wal_db_device="$2"
   namespace=${CEPH_NAMESPACE}
   sudo mkdir -p /var/lib/openstack-helm/$namespace
-  sudo truncate -s 10G /var/lib/openstack-helm/$namespace/ceph-osd-data-loopbackfile.img
-  sudo truncate -s 8G /var/lib/openstack-helm/$namespace/ceph-osd-db-wal-loopbackfile.img
+  sudo truncate -s 500G /var/lib/openstack-helm/$namespace/ceph-osd-data-loopbackfile.img
+  sudo truncate -s 80G /var/lib/openstack-helm/$namespace/ceph-osd-db-wal-loopbackfile.img
   sudo -E bash -c "cat <<EOF > /etc/systemd/system/loops-setup.service
 [Unit]
 Description=Setup loop devices

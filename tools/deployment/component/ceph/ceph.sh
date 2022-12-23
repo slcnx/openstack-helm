@@ -17,8 +17,8 @@ set -xe
 export CEPH_ENABLED=true
 
 if [ "${CREATE_LOOPBACK_DEVICES_FOR_CEPH:=true}" == "true" ]; then
-  ./tools/deployment/common/setup-ceph-loopback-device.sh --ceph-osd-data ${CEPH_OSD_DATA_DEVICE:=/dev/loop0} \
-  --ceph-osd-dbwal ${CEPH_OSD_DB_WAL_DEVICE:=/dev/loop1}
+  ./tools/deployment/common/setup-ceph-loopback-device.sh --ceph-osd-data ${CEPH_OSD_DATA_DEVICE:=/dev/loop20} \
+  --ceph-osd-dbwal ${CEPH_OSD_DB_WAL_DEVICE:=/dev/loop21}
 fi
 
 #NOTE: Lint and package chart

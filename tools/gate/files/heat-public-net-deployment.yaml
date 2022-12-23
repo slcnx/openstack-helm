@@ -45,4 +45,4 @@ resources:
         get_param: subnet_gateway
       enable_dhcp: false
       dns_nameservers:
-        - 10.20.0.10
+        - 172.24.4.1
